@@ -1,6 +1,6 @@
 'use client'
 import { useEffect, useState } from 'react'
-import { useSession, useUser } from '@clerk/nextjs'
+import { useSession, useUser, UserButton } from '@clerk/nextjs'
 import { createClient } from '@supabase/supabase-js'
 import * as React from 'react';
 import { styled } from '@mui/material/styles';
@@ -141,6 +141,7 @@ export default function Home() {
   }
   return (
     <div>
+      <UserButton />
       <h1>Tasks</h1>
 
       {loading && <p>Loading...</p>}
